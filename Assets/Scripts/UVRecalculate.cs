@@ -24,7 +24,7 @@ public class UVRecalculate : MonoBehaviour
         _mesh = _meshFilter.mesh;
         _verts = _mesh.vertices;
         _uvs = new Vector2[_mesh.vertexCount];
-        // _mesh.triangles = _mesh.triangles.Reverse().ToArray();
+        _mesh.triangles = _mesh.triangles.Reverse().ToArray();
     }
 
     private void OnEnable() => _faceManager.facesChanged += OnFaceChanged;
